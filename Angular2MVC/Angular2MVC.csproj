@@ -192,6 +192,7 @@
     <Content Include="app\Components\side-bar\side-bar.component.html" />
     <Content Include="app\Components\tables\tables.component.html" />
     <Content Include="app\Components\top-bar\top-bar.component.html" />
+    <Content Include="app\Components\login\login.component.html" />
     <Content Include="App_Data\UserDB.mdf" />
     <Content Include="App_Data\UserDB_log.ldf">
       <DependentUpon>UserDB.mdf</DependentUpon>
@@ -330,6 +331,8 @@
     <TypeScriptCompile Include="app\Components\side-bar\side-bar.component.ts" />
     <TypeScriptCompile Include="app\Components\tables\tables.component.ts" />
     <TypeScriptCompile Include="app\Components\top-bar\top-bar.component.ts" />
+    <TypeScriptCompile Include="app\Guards\auth.guard.ts" />
+    <TypeScriptCompile Include="app\Components\login\login.component.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\Model\user.ts" />
     <TypeScriptCompile Include="app\Services\user.service.ts" />

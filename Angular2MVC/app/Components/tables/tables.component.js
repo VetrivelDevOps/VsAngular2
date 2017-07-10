@@ -9,21 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var http_1 = require("@angular/http");
+var user_service_1 = require("../../Services/user.service");
 var TablesComponent = (function () {
-    function TablesComponent(_httpService) {
-        this._httpService = _httpService;
-        this.apiValues = [];
-    }
-    TablesComponent.prototype.ngOnInit = function () {
+    function TablesComponent(_userService) {
         var _this = this;
-        this._httpService.get('/api/UserApi').subscribe(function (values) {
-            _this.apiValues = values.json();
+        this._userService = _userService;
+        this._userService.getUsers().subscribe(function (users) {
+            _this.user = users;
         });
-    };
+    }
+    ;
     TablesComponent.prototype.AlertMe = function () {
         alert('Why you clicked Me..!');
     };
+    ;
     return TablesComponent;
 }());
 TablesComponent = __decorate([
@@ -31,7 +30,7 @@ TablesComponent = __decorate([
         selector: 'app-tables',
         templateUrl: 'app/Components/tables/tables.component.html'
     }),
-    __metadata("design:paramtypes", [http_1.Http])
+    __metadata("design:paramtypes", [user_service_1.UserService])
 ], TablesComponent);
 exports.TablesComponent = TablesComponent;
 //# sourceMappingURL=tables.component.js.map

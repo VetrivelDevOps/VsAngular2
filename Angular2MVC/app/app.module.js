@@ -17,6 +17,7 @@ var top_bar_component_1 = require("./Components/top-bar/top-bar.component");
 var side_bar_component_1 = require("./Components/side-bar/side-bar.component");
 var dashboard_component_1 = require("./Components/dashboard/dashboard.component");
 var tables_component_1 = require("./Components/tables/tables.component");
+var user_service_1 = require("./Services/user.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -26,7 +27,7 @@ AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, forms_1.ReactiveFormsModule, http_1.HttpModule, app_routing_1.routing],
         declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, top_bar_component_1.TopBarComponent, side_bar_component_1.SideBarComponent, dashboard_component_1.DashboardComponent, tables_component_1.TablesComponent],
-        providers: [{ provide: common_1.APP_BASE_HREF, useValue: '/' }],
+        providers: [{ provide: common_1.APP_BASE_HREF, useValue: '/' }, user_service_1.UserService],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

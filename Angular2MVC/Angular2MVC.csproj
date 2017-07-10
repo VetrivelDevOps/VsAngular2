@@ -332,6 +332,7 @@
     <TypeScriptCompile Include="app\Components\top-bar\top-bar.component.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\Model\user.ts" />
+    <TypeScriptCompile Include="app\Services\user.service.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

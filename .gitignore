@@ -346,14 +346,14 @@ $RECYCLE.BIN/
 aot/
 
 # TypeScript compilation files
-**/angularApp/app/**/*.js
-**/angularApp/app/**/*.map
-**/angularApp/app/*.js
-**/angularApp/app/*.map
-**/angularApp/*.js
-**/angularApp/*.map
-**/angularApp/tests/**/*.js
-**/angularApp/tests/**/*.map
+**/Angular2MVC/app/**/*.js
+**/Angular2MVC/app/**/*.map
+**/Angular2MVC/app/*.js
+**/Angular2MVC/app/*.map
+**/Angular2MVC/*.js
+**/Angular2MVC/*.map
+**/Angular2MVC/tests/**/*.js
+**/Angular2MVC/tests/**/*.map
 Angular2WebpackVisualStudio/src/Angular2WebpackVisualStudio/wwwroot/
 src/Angular2WebpackVisualStudio/wwwroot/assets
 src/Angular2WebpackVisualStudio/wwwroot/dist

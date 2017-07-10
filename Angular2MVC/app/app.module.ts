@@ -10,11 +10,12 @@ import { TopBarComponent } from './Components/top-bar/top-bar.component';
 import { SideBarComponent } from './Components/side-bar/side-bar.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { TablesComponent } from './Components/tables/tables.component';
+import { UserService } from './Services/user.service';
 
 @NgModule({
     imports: [BrowserModule, ReactiveFormsModule, HttpModule, routing],
     declarations: [AppComponent, HomeComponent, TopBarComponent, SideBarComponent, DashboardComponent, TablesComponent],
-    providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+    providers: [{ provide: APP_BASE_HREF, useValue: '/' }, UserService],
     bootstrap: [AppComponent]
 })
 

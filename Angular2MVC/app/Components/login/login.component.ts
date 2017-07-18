@@ -8,8 +8,8 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent {
     returnUrl: string;
-    private username:string = "" ;
-    private password:string = "";
+    username: string = '';
+    password:string = "";
     inputValueChange: EventEmitter<any> = new EventEmitter();
     constructor(
         private route: ActivatedRoute,

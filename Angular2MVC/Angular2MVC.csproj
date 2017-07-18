@@ -334,6 +334,7 @@
     <TypeScriptCompile Include="app\Guards\auth.guard.ts" />
     <TypeScriptCompile Include="app\Components\login\login.component.ts" />
     <TypeScriptCompile Include="app\main.ts" />
+    <TypeScriptCompile Include="app\MockService\MockDashboard.ts" />
     <TypeScriptCompile Include="app\Model\user.ts" />
     <TypeScriptCompile Include="app\Services\user.service.ts" />
   </ItemGroup>

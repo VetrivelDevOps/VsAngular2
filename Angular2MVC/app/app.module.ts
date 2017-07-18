@@ -13,12 +13,14 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { LoginComponent } from './Components/login/login.component';
 import { TablesComponent } from './Components/tables/tables.component';
 import { UserService } from './Services/user.service';
+import { LandingService } from './Services/landing.service';
 import { AuthGuard } from './Guards/auth.guard';
+import { LandingComponent } from './Components/landing/landing.component'
 
 @NgModule({
     imports: [BrowserModule, ReactiveFormsModule, HttpModule, routing, FormsModule],
-    declarations: [AppComponent, HomeComponent, TopBarComponent, SideBarComponent, DashboardComponent, TablesComponent, LoginComponent],
-    providers: [AuthGuard, { provide: APP_BASE_HREF, useValue: '/' }, UserService],
+    declarations: [AppComponent, HomeComponent, TopBarComponent, SideBarComponent, DashboardComponent, TablesComponent, LoginComponent, LandingComponent],
+    providers: [AuthGuard, { provide: APP_BASE_HREF, useValue: '/' }, UserService, LandingService],
     bootstrap: [AppComponent]
 })
 

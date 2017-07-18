@@ -6,11 +6,13 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { TablesComponent } from './Components/tables/tables.component';
 import { AuthGuard } from './Guards/auth.guard';
 import { LoginComponent } from './Components/login/login.component'
+import { LandingComponent } from './Components/landing/landing.component'
 const appRoutes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
-    { path: 'home', component: DashboardComponent, canActivate: [AuthGuard] },
+    { path: 'home', component: LandingComponent, canActivate: [AuthGuard] },
     { path: 'tables', component: TablesComponent },
-    { path: 'login', component: LoginComponent }
+    { path: 'login', component: LoginComponent },
+    { path: 'dashboard', component: DashboardComponent}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

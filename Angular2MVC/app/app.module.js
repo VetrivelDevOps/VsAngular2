@@ -5,6 +5,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var common_1 = require("@angular/common");
 var forms_1 = require("@angular/forms");
@@ -20,7 +21,9 @@ var dashboard_component_1 = require("./Components/dashboard/dashboard.component"
 var login_component_1 = require("./Components/login/login.component");
 var tables_component_1 = require("./Components/tables/tables.component");
 var user_service_1 = require("./Services/user.service");
+var landing_service_1 = require("./Services/landing.service");
 var auth_guard_1 = require("./Guards/auth.guard");
+var landing_component_1 = require("./Components/landing/landing.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -29,8 +32,8 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, forms_2.ReactiveFormsModule, http_1.HttpModule, app_routing_1.routing, forms_1.FormsModule],
-        declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, top_bar_component_1.TopBarComponent, side_bar_component_1.SideBarComponent, dashboard_component_1.DashboardComponent, tables_component_1.TablesComponent, login_component_1.LoginComponent],
-        providers: [auth_guard_1.AuthGuard, { provide: common_1.APP_BASE_HREF, useValue: '/' }, user_service_1.UserService],
+        declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, top_bar_component_1.TopBarComponent, side_bar_component_1.SideBarComponent, dashboard_component_1.DashboardComponent, tables_component_1.TablesComponent, login_component_1.LoginComponent, landing_component_1.LandingComponent],
+        providers: [auth_guard_1.AuthGuard, { provide: common_1.APP_BASE_HREF, useValue: '/' }, user_service_1.UserService, landing_service_1.LandingService],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

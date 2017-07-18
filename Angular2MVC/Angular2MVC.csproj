@@ -26,7 +26,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>2.1</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>2.2</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -189,6 +189,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\Components\dashboard\dashboard.component.html" />
+    <Content Include="app\Components\landing\landing.component.html" />
     <Content Include="app\Components\side-bar\side-bar.component.html" />
     <Content Include="app\Components\tables\tables.component.html" />
     <Content Include="app\Components\top-bar\top-bar.component.html" />
@@ -328,6 +329,7 @@
     <TypeScriptCompile Include="app\app.routing.ts" />
     <TypeScriptCompile Include="app\Components\dashboard\dashboard.component.ts" />
     <TypeScriptCompile Include="app\Components\home.component.ts" />
+    <TypeScriptCompile Include="app\Components\landing\landing.component.ts" />
     <TypeScriptCompile Include="app\Components\side-bar\side-bar.component.ts" />
     <TypeScriptCompile Include="app\Components\tables\tables.component.ts" />
     <TypeScriptCompile Include="app\Components\top-bar\top-bar.component.ts" />
@@ -335,7 +337,10 @@
     <TypeScriptCompile Include="app\Components\login\login.component.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\MockService\MockDashboard.ts" />
+    <TypeScriptCompile Include="app\MockService\MockLanding.ts" />
+    <TypeScriptCompile Include="app\Model\landing.ts" />
     <TypeScriptCompile Include="app\Model\user.ts" />
+    <TypeScriptCompile Include="app\Services\landing.service.ts" />
     <TypeScriptCompile Include="app\Services\user.service.ts" />
   </ItemGroup>
   <PropertyGroup>

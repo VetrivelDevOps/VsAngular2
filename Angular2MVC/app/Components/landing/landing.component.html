@@ -7,20 +7,12 @@
                     <table class="table table-bordered table-hover table-striped">
                         <thead>
                             <tr>
-                                <th>Claim Id</th>
-                                <th>Type Of Claim</th>
-                                <th>Date</th>
-                                <th>Description</th>
-                                <th>Status</th>
+                                <th *ngFor="let cObj of columns">{{cObj}}</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr *ngFor="let value of landing">
-                                <td>{{value.ClaimId}}</td>
-                                <td>{{value.Type}}</td>
-                                <td>{{value.Date}}</td>
-                                <td>{{value.Description}}</td>
-                                <td>{{value.Status}}</td>
+                                <td *ngFor="let icObj of columns">{{value[icObj]}}</td>                                
                             </tr>
                         </tbody>
                     </table>

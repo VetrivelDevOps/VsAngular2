@@ -1,12 +1,20 @@
 ﻿export class ILanding {
-    ClaimId: string;
-    Type: string;
-    Date: string;
-    Description: string;
-    Status: string
+    Id: string;
+    ClaimantName: string;
+    ClaimRefNo: string;
+    ClaimStatus: string;
 };
 
 export interface IClaims {
     LandingList: ILanding[],
-    LandingHead: string[]
+    LandingHead: UIPageEelements[]
 };
+
+export class UIPageEelements {
+    pageName : string ;
+    elementName: string;
+    sequenceId: number;
+    label: string;
+    editableReadOnlyHidden: number;
+    placeholder : string ;    
+}

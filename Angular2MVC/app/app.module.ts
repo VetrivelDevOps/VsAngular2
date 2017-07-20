@@ -1,4 +1,4 @@
-﻿import { NgModule } from '@angular/core';
+﻿import { NgModule, ErrorHandler } from '@angular/core';
 import { APP_BASE_HREF } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,13 +14,19 @@ import { LoginComponent } from './Components/login/login.component';
 import { TablesComponent } from './Components/tables/tables.component';
 import { UserService } from './Services/user.service';
 import { LandingService } from './Services/landing.service';
-import { AuthGuard } from './Guards/auth.guard';
 import { LandingComponent } from './Components/landing/landing.component'
+import { RegisterComponent } from './Components/register.component';
+import { AuthGuard } from './_guards/auth.guard';
+import { AuthenticationService } from './Services/authentication.service';
+import { UIPageService } from './Services/uipage.service';
+import AppErrorHandler from './Shared/errorhandler';
+import { RegistrationService } from './Services/registration.service';
 
 @NgModule({
     imports: [BrowserModule, ReactiveFormsModule, HttpModule, routing, FormsModule],
-    declarations: [AppComponent, HomeComponent, TopBarComponent, SideBarComponent, DashboardComponent, TablesComponent, LoginComponent, LandingComponent],
-    providers: [AuthGuard, { provide: APP_BASE_HREF, useValue: '/' }, UserService, LandingService],
+    declarations: [RegisterComponent, AppComponent, HomeComponent, TopBarComponent, SideBarComponent, DashboardComponent, TablesComponent, LoginComponent, LandingComponent],
+    providers: [RegistrationService, UIPageService, AuthGuard,
+        AuthenticationService, { provide: ErrorHandler, useClass: AppErrorHandler }, { provide: APP_BASE_HREF, useValue: '/' }, UserService, LandingService],
     bootstrap: [AppComponent]
 })
 

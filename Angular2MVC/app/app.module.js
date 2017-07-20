@@ -22,8 +22,13 @@ var login_component_1 = require("./Components/login/login.component");
 var tables_component_1 = require("./Components/tables/tables.component");
 var user_service_1 = require("./Services/user.service");
 var landing_service_1 = require("./Services/landing.service");
-var auth_guard_1 = require("./Guards/auth.guard");
 var landing_component_1 = require("./Components/landing/landing.component");
+var register_component_1 = require("./Components/register.component");
+var auth_guard_1 = require("./_guards/auth.guard");
+var authentication_service_1 = require("./Services/authentication.service");
+var uipage_service_1 = require("./Services/uipage.service");
+var errorhandler_1 = require("./Shared/errorhandler");
+var registration_service_1 = require("./Services/registration.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -32,8 +37,9 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, forms_2.ReactiveFormsModule, http_1.HttpModule, app_routing_1.routing, forms_1.FormsModule],
-        declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, top_bar_component_1.TopBarComponent, side_bar_component_1.SideBarComponent, dashboard_component_1.DashboardComponent, tables_component_1.TablesComponent, login_component_1.LoginComponent, landing_component_1.LandingComponent],
-        providers: [auth_guard_1.AuthGuard, { provide: common_1.APP_BASE_HREF, useValue: '/' }, user_service_1.UserService, landing_service_1.LandingService],
+        declarations: [register_component_1.RegisterComponent, app_component_1.AppComponent, home_component_1.HomeComponent, top_bar_component_1.TopBarComponent, side_bar_component_1.SideBarComponent, dashboard_component_1.DashboardComponent, tables_component_1.TablesComponent, login_component_1.LoginComponent, landing_component_1.LandingComponent],
+        providers: [registration_service_1.RegistrationService, uipage_service_1.UIPageService, auth_guard_1.AuthGuard,
+            authentication_service_1.AuthenticationService, { provide: core_1.ErrorHandler, useClass: errorhandler_1.default }, { provide: common_1.APP_BASE_HREF, useValue: '/' }, user_service_1.UserService, landing_service_1.LandingService],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

@@ -10,11 +10,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+require("../../mockservice/mocklanding");
+var router_1 = require("@angular/router");
 var TopBarComponent = (function () {
-    function TopBarComponent() {
+    function TopBarComponent(route, router) {
+        this.route = route;
+        this.router = router;
+        this.returnUrl = '/';
     }
     TopBarComponent.prototype.ngOnInit = function () {
     };
+    TopBarComponent.prototype.LogOut = function () {
+        localStorage.removeItem('username');
+    };
+    ;
     return TopBarComponent;
 }());
 TopBarComponent = __decorate([
@@ -22,7 +31,7 @@ TopBarComponent = __decorate([
         selector: 'app-top-bar',
         templateUrl: 'app/Components/top-bar/top-bar.component.html'
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [router_1.ActivatedRoute, router_1.Router])
 ], TopBarComponent);
 exports.TopBarComponent = TopBarComponent;
 //# sourceMappingURL=top-bar.component.js.map

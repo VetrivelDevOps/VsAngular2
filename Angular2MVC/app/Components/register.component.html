@@ -1,0 +1,30 @@
+﻿<div class="col-md-6 col-md-offset-3" *ngIf="isloaded" style="background: #fff;border-radius: 3px 3px; padding: 10px;">
+    <h2>Register</h2>
+    <form name="form" (ngSubmit)="f.form.valid && addUser()" #f="ngForm" novalidate>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !fullname.valid }">
+            <label for="fullname">{{screenElements[3].label}}</label>
+            <input type="text" class="form-control" name="fullname" [(ngModel)]="model.fullname" #username="ngModel" required />
+            <div *ngIf="f.submitted && !fullname.valid" class="help-block">Fullname is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
+            <label for="email">{{screenElements[0].label}}</label>
+            <input type="email" class="form-control" name="email" [(ngModel)]="model.email" #password="ngModel" required />
+            <div *ngIf="f.submitted && !email.valid" class="help-block">Please enter a valid EmailId</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+            <label for="password">{{screenElements[1].label}}</label>
+            <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" required />
+            <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !confirmpassword.valid }">
+            <label for="confirmpassword">{{screenElements[2].label}}</label>
+            <input type="password" class="form-control" name="confirmpassword" [(ngModel)]="model.confirmpassword" #password="ngModel" required />
+            <div *ngIf="f.submitted && !confirmpassword.valid" class="help-block">Password mismatch please re-enter password</div>
+        </div>
+        <div class="form-group">
+            <button *ngIf="screenElements[4].EditableReadOnlyHidden == 1" [disabled]="loading" class="btn btn-primary">{{screenElements[4].label}}</button>
+            <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+            <a *ngIf="screenElements[5].EditableReadOnlyHidden == 1" [routerLink]="['/login']" class="btn btn-link">{{screenElements[5].label}}</a>
+        </div>
+    </form>
+</div>

@@ -1,3 +1,4 @@
+<app-top-bar></app-top-bar>
 <div id="page-wrapper">
     <div class="container-fluid">
         <div class="row">
@@ -7,12 +8,12 @@
                     <table class="table table-bordered table-hover table-striped">
                         <thead>
                             <tr>
-                                <th *ngFor="let cObj of columns">{{cObj}}</th>
+                                <th *ngFor="let cObj of columns">{{cObj.label}}</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr *ngFor="let value of landing">
-                                <td *ngFor="let icObj of columns">{{value[icObj]}}</td>                                
+                                <td *ngFor="let icObj of columns">{{value[icObj.elementName]}}</td>                                
                             </tr>
                         </tbody>
                     </table>

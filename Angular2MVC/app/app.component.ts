@@ -2,8 +2,7 @@
 @Component({
     selector: "user-app",
     template: `
-        <div id="wrapper">
-          <app-top-bar></app-top-bar>
+        <div id="wrapper">          
           <router-outlet></router-outlet>
         </div>       
 `
